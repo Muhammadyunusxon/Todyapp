@@ -19,7 +19,7 @@ abstract class Style {
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
       colors: [
-        successColor,
+        Color(0x6517A1A1),
         brandColor,
       ]);
 
@@ -30,6 +30,45 @@ abstract class Style {
         Color(0x5017A1A1),
         Color(0x5024A19C),
       ]);
+  static const addGradiant = LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [
+        Color(0x4024A19C),
+        Color(0x3024A19C),
+      ]);
+
+  static const whiteGradient = LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [
+        Color(0xffF5F5F9),
+        Color(0xffDADFE7),
+      ]);
+  // ------------------Box shadow------------------//
+
+  static const primaryShadow = [
+    BoxShadow(
+      offset: Offset(10, 10),
+      blurRadius: 20,
+      color: Color(0x500D1431),
+
+    ),
+    BoxShadow(
+      offset: Offset(-10, -10),
+      blurRadius: 20,
+      color: Color(0x50FFFFFF),
+
+    ),
+    BoxShadow(
+      offset: Offset(1, 1),
+      blurRadius: 0.5,
+      color: Color(0xFFFFFFFF),
+
+    ),
+  ];
+
+
 
 // ------------------text style------------------//
   static textStyleNormal(

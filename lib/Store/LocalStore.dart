@@ -39,4 +39,10 @@ class LocalStore {
     });
     return listOfTodo;
   }
+  static removeTodo(int index) async {
+    SharedPreferences store = await SharedPreferences.getInstance();
+    List<String> list = store.getStringList('todo') ?? [];
+    list.removeAt(index);
+    store.setStringList('todo', list);
+  }
 }
